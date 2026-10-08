@@ -130,7 +130,9 @@ Entorno: contenedor Linux, PHP 8.3.6, WordPress 6.8.3, WP-CLI 2.11.0.
 - `tests/e2e-smoke.sh` contra `php -S` + MariaDB, con un editor sin capacidad: **31 correctas, 0 fallidas**.
 - Ciclo de vida verificado con WP-CLI: activación crea 3 tablas y la capacidad; `dbDelta` repetido sin errores; desactivar conserva datos; desinstalar con la política por defecto conserva tablas y opciones; con la opción activada borra tablas, opciones y capacidad; reactivar crea tablas vacías sin datos de ejemplo.
 - Revisión visual con Chromium (Playwright) a 1366 px y 390 px: panel, listados y formularios correctos.
-- **No verificado aún en local**: ejecución real en PHP 7.4 y WordPress 6.0 (solo análisis estático); el flujo de CI lo cubre — consulta su estado en la pestaña *Actions* antes de afirmarlo.
+- **GitHub Actions** (ejecución 1, commit `f628a52`): los 8 trabajos en verde — `php -l` en PHP 7.4, 8.0, 8.1, 8.2 y 8.3; PHPCS; integración + HTTP con MariaDB 10.11 en **WordPress 6.0 / PHP 7.4** (90/90 y 31/31 según el registro) y en **WordPress latest / PHP 8.3**.
+- ZIP de `bin/build-zip.sh` (25 entradas, sin archivos de desarrollo) instalado y activado con `wp plugin install` en un WordPress limpio.
+- Comprueba siempre el estado actual en la pestaña *Actions* antes de afirmar que algo pasa.
 
 ## 7. Procedimiento para hacer cambios sin romper nada
 

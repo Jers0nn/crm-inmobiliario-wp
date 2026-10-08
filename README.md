@@ -2,7 +2,7 @@
 
 Plugin de WordPress que añade un CRM mínimo al escritorio para **agentes inmobiliarios y pequeñas inmobiliarias**: contactos y leads, propiedades y seguimientos comerciales, sin servicios externos ni dependencias de terceros.
 
-> Estado: **versión 0.1.0 (primera versión funcional)**. Probado en WordPress 6.8.3 con PHP 8.3 sobre MariaDB 10.11 y sobre SQLite. Consulta [Pruebas](#pruebas) y [Limitaciones](#limitaciones).
+> Estado: **versión 0.1.0 (primera versión funcional)**. Pruebas automáticas superadas en WordPress 6.0 (PHP 7.4), 6.8.3 (PHP 8.3) y la última versión (PHP 8.3) sobre MariaDB 10.11. Consulta [Pruebas](#pruebas) y [Limitaciones](#limitaciones).
 
 ## Funcionalidades
 
@@ -118,7 +118,7 @@ Resultados de la última ejecución (WordPress 6.8.3, PHP 8.3.6):
 
 \* La emulación SQLite no respeta el escape de comodines de `esc_like()`; en MySQL/MariaDB sí se comprueba.
 
-El flujo de GitHub Actions (`.github/workflows/ci.yml`) está configurado para repetir sintaxis en PHP 7.4–8.3, PHPCS y las pruebas de integración y HTTP con WordPress 6.0/PHP 7.4 y la última versión de WordPress/PHP 8.3.
+El flujo de GitHub Actions (`.github/workflows/ci.yml`) repite en cada envío a `main` la sintaxis en PHP 7.4–8.3, PHPCS y las pruebas de integración y HTTP con WordPress 6.0/PHP 7.4 y la última versión de WordPress/PHP 8.3 (MariaDB 10.11). Primera ejecución: los 8 trabajos en verde; en WordPress 6.0/PHP 7.4, 90/90 pruebas de integración y 31/31 HTTP.
 
 ## Limitaciones
 
