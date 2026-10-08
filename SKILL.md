@@ -42,7 +42,7 @@ assets/js/admin.js           Confirmación para elementos con data-crmi-confirm
 languages/crm-inmobiliario-wp.pot
 tests/test-crm.php           Pruebas de integración (WP-CLI eval-file)
 tests/e2e-smoke.sh           Prueba de humo HTTP con curl (login, formularios, nonces, permisos)
-bin/build-zip.sh             ZIP instalable con git archive (respeta export-ignore)
+bin/build-zip.sh             ZIP instalable con git archive (respeta export-ignore y quita README.md y SKILL.md)
 .github/workflows/ci.yml     php -l (7.4–8.3), PHPCS, integración + HTTP con MariaDB
 ```
 
@@ -144,6 +144,7 @@ Entorno: contenedor Linux, PHP 8.3.6, WordPress 6.8.3, WP-CLI 2.11.0.
 6. Ejecuta `composer lint`, `composer phpcs`, las pruebas de integración y la de humo. **No declares que algo funciona si no lo has ejecutado**; si no puedes ejecutarlo, dilo.
 7. Revisa a mano la pantalla afectada en escritorio y móvil.
 8. Actualiza README.md, readme.txt y la sección 6/9 de este archivo con los resultados reales.
+9. No marques `SKILL.md` como `export-ignore` en `.gitattributes`: los importadores de skills descargan el ZIP de GitHub y fallan con «SKILL.md not found in zip package».
 
 ## 8. Reglas de Git
 

@@ -31,7 +31,7 @@ No necesita plugins adicionales ni Composer en producción.
 
 **Opción A: ZIP desde GitHub**
 
-1. En GitHub pulsa *Code → Download ZIP*. La descarga ya excluye las pruebas y archivos de desarrollo (ver `.gitattributes`).
+1. En GitHub pulsa *Code → Download ZIP*. La descarga excluye las pruebas y herramientas de desarrollo (ver `.gitattributes`); incluye `README.md` y `SKILL.md`, que WordPress ignora.
 2. En WordPress ve a *Plugins → Añadir nuevo → Subir plugin*, selecciona el ZIP e instala.
 3. Activa **CRM Inmobiliario Sencillo**. Aparecerá el menú **CRM Inmobiliario**.
 
@@ -89,7 +89,7 @@ tests/                         Pruebas de integración (WP-CLI) y de humo (HTTP)
 bin/build-zip.sh               Generador del ZIP instalable
 ```
 
-Guía completa para mantener el proyecto: [SKILL.md](SKILL.md).
+Guía completa para mantener el proyecto: [SKILL.md](SKILL.md). Puede importarse como skill en herramientas compatibles (por ejemplo, LobeHub) usando la URL del repositorio: el ZIP de GitHub incluye `SKILL.md` en la raíz.
 
 ### Comprobaciones
 

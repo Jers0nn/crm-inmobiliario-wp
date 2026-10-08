@@ -5,6 +5,9 @@
 
 # Archivos de desarrollo excluidos del paquete instalable
 # (bin/build-zip.sh y la descarga ZIP de GitHub usan git archive).
+# README.md y SKILL.md NO se excluyen aquí: los importadores de skills
+# (p. ej. LobeHub) descargan el ZIP de GitHub y necesitan SKILL.md.
+# bin/build-zip.sh los quita del paquete del plugin.
 /.github            export-ignore
 /bin                export-ignore
 /tests              export-ignore
@@ -14,5 +17,3 @@
 /composer.json      export-ignore
 /composer.lock      export-ignore
 /phpcs.xml.dist     export-ignore
-/README.md          export-ignore
-/SKILL.md           export-ignore
