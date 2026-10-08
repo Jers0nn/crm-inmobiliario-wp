@@ -1,0 +1,18 @@
+# Normaliza finales de línea.
+* text=auto eol=lf
+*.png binary
+*.zip binary
+
+# Archivos de desarrollo excluidos del paquete instalable
+# (bin/build-zip.sh y la descarga ZIP de GitHub usan git archive).
+/.github            export-ignore
+/bin                export-ignore
+/tests              export-ignore
+/.editorconfig      export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/composer.json      export-ignore
+/composer.lock      export-ignore
+/phpcs.xml.dist     export-ignore
+/README.md          export-ignore
+/SKILL.md           export-ignore

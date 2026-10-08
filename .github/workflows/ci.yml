@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Sintaxis PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+      - name: php -l
+        run: find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+
+  phpcs:
+    name: Estándares de WordPress (PHPCS)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+          tools: composer
+      - run: composer install --no-interaction --no-progress
+      - run: vendor/bin/phpcs
+
+  integration:
+    name: Integración WP ${{ matrix.wp }} / PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { php: '7.4', wp: '6.0' }
+          - { php: '8.3', wp: 'latest' }
+    services:
+      mariadb:
+        image: mariadb:10.11
+        env:
+          MARIADB_ROOT_PASSWORD: root
+          MARIADB_DATABASE: wp
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    env:
+      WP_PATH: /tmp/wordpress
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          extensions: mysqli
+          tools: wp-cli
+      - name: Instalar WordPress
+        run: |
+          wp core download --version=${{ matrix.wp }} --path="$WP_PATH"
+          wp config create --path="$WP_PATH" --dbname=wp --dbuser=root --dbpass=root --dbhost=127.0.0.1 --skip-check
+          wp core install --path="$WP_PATH" --url=http://127.0.0.1:8080 --title=CRM --admin_user=admin --admin_password=admin --admin_email=admin@example.com --skip-email
+          wp user create agente agente@example.com --role=editor --user_pass=agente --path="$WP_PATH"
+          ln -s "$GITHUB_WORKSPACE" "$WP_PATH/wp-content/plugins/crm-inmobiliario-wp"
+          wp plugin activate crm-inmobiliario-wp --path="$WP_PATH"
+      - name: Pruebas de integración
+        run: CRMI_RUN_TESTS=1 wp eval-file tests/test-crm.php --path="$WP_PATH"
+      - name: Prueba de humo HTTP
+        run: |
+          php -S 127.0.0.1:8080 -t "$WP_PATH" > /tmp/server.log 2>&1 &
+          sleep 2
+          bash tests/e2e-smoke.sh http://127.0.0.1:8080 admin admin agente agente

@@ -1,0 +1,31 @@
+# Dependencias de desarrollo
+/vendor/
+/node_modules/
+
+# Paquetes generados
+/dist/
+*.zip
+
+# Secretos y configuración local
+.env
+.env.*
+wp-config.php
+wp-config-local.php
+auth.json
+*.pem
+*.key
+
+# Registros y temporales
+*.log
+*.tmp
+*.cache
+.phpcs-cache
+.phpunit.result.cache
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

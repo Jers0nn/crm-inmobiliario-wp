@@ -1,0 +1,708 @@
+# Copyright (C) 2026 Jers0nn
+# This file is distributed under the MIT.
+msgid ""
+msgstr ""
+"Project-Id-Version: CRM Inmobiliario Sencillo 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Jers0nn/crm-inmobiliario-wp/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-08T22:42:50+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: crm-inmobiliario-wp\n"
+
+#. Plugin Name of the plugin
+#: crm-inmobiliario-wp.php
+msgid "CRM Inmobiliario Sencillo"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: crm-inmobiliario-wp.php
+msgid "https://github.com/Jers0nn/crm-inmobiliario-wp"
+msgstr ""
+
+#. Description of the plugin
+#: crm-inmobiliario-wp.php
+msgid "CRM mínimo para agentes inmobiliarios y pequeñas inmobiliarias: contactos, propiedades y seguimientos comerciales dentro del escritorio de WordPress."
+msgstr ""
+
+#. Author of the plugin
+#: crm-inmobiliario-wp.php
+msgid "Jers0nn"
+msgstr ""
+
+#: admin/views/dashboard.php:13
+#: includes/class-crmi-entities.php:64
+msgid "Contactos"
+msgstr ""
+
+#: admin/views/dashboard.php:14
+msgid "Leads activos"
+msgstr ""
+
+#: admin/views/dashboard.php:14
+msgid "Nuevos, contactados o cualificados"
+msgstr ""
+
+#: admin/views/dashboard.php:15
+msgid "Oportunidades"
+msgstr ""
+
+#: admin/views/dashboard.php:15
+msgid "Contactos en negociación"
+msgstr ""
+
+#. translators: %d: número de propiedades disponibles.
+#: admin/views/dashboard.php:17
+#: includes/class-crmi-entities.php:108
+msgid "Propiedades"
+msgstr ""
+
+#. translators: %d: número de propiedades disponibles.
+#: admin/views/dashboard.php:17
+msgid "%d disponibles"
+msgstr ""
+
+#: admin/views/dashboard.php:18
+msgid "Seguimientos pendientes"
+msgstr ""
+
+#: admin/views/dashboard.php:19
+msgid "Seguimientos vencidos"
+msgstr ""
+
+#: admin/views/dashboard.php:23
+#: includes/class-crmi-admin.php:51
+#: includes/class-crmi-admin.php:52
+msgid "CRM Inmobiliario"
+msgstr ""
+
+#: admin/views/dashboard.php:24
+msgid "Añadir contacto"
+msgstr ""
+
+#: admin/views/dashboard.php:25
+msgid "Añadir propiedad"
+msgstr ""
+
+#: admin/views/dashboard.php:26
+#: admin/views/form.php:165
+msgid "Añadir seguimiento"
+msgstr ""
+
+#: admin/views/dashboard.php:45
+msgid "Próximos seguimientos pendientes"
+msgstr ""
+
+#: admin/views/dashboard.php:47
+msgid "No hay seguimientos pendientes."
+msgstr ""
+
+#: admin/views/dashboard.php:52
+#: admin/views/dashboard.php:60
+#: admin/views/form.php:174
+#: admin/views/form.php:183
+#: includes/class-crmi-admin.php:546
+#: includes/class-crmi-entities.php:168
+msgid "Tarea"
+msgstr ""
+
+#: admin/views/dashboard.php:53
+#: admin/views/dashboard.php:61
+#: admin/views/form.php:175
+#: admin/views/form.php:184
+#: includes/class-crmi-admin.php:547
+msgid "Fecha"
+msgstr ""
+
+#: admin/views/dashboard.php:54
+#: admin/views/dashboard.php:62
+#: admin/views/form.php:176
+#: admin/views/form.php:185
+#: includes/class-crmi-admin.php:548
+#: includes/class-crmi-entities.php:63
+#: includes/class-crmi-entities.php:174
+msgid "Contacto"
+msgstr ""
+
+#: admin/views/dashboard.php:71
+msgid "Últimos contactos"
+msgstr ""
+
+#: admin/views/dashboard.php:74
+msgid "Todavía no hay contactos."
+msgstr ""
+
+#: admin/views/dashboard.php:75
+msgid "Añade el primero"
+msgstr ""
+
+#: admin/views/dashboard.php:81
+#: admin/views/dashboard.php:89
+#: includes/class-crmi-admin.php:529
+#: includes/class-crmi-entities.php:69
+msgid "Nombre"
+msgstr ""
+
+#: admin/views/dashboard.php:82
+#: admin/views/dashboard.php:90
+#: admin/views/form.php:177
+#: admin/views/form.php:186
+#: includes/class-crmi-admin.php:533
+#: includes/class-crmi-admin.php:543
+#: includes/class-crmi-admin.php:550
+#: includes/class-crmi-entities.php:91
+#: includes/class-crmi-entities.php:146
+#: includes/class-crmi-entities.php:188
+msgid "Estado"
+msgstr ""
+
+#: admin/views/dashboard.php:83
+#: admin/views/dashboard.php:91
+#: includes/class-crmi-admin.php:534
+msgid "Creado"
+msgstr ""
+
+#. translators: %s: nombre de la entidad en singular.
+#: admin/views/form.php:15
+msgid "Editar %s"
+msgstr ""
+
+#. translators: %s: nombre de la entidad en singular.
+#: admin/views/form.php:17
+msgid "Añadir %s"
+msgstr ""
+
+#: admin/views/form.php:21
+msgid "Volver al listado"
+msgstr ""
+
+#: admin/views/form.php:28
+msgid "Revisa los siguientes datos:"
+msgstr ""
+
+#: admin/views/form.php:79
+msgid "— Ninguno —"
+msgstr ""
+
+#. translators: %s: entidad en plural.
+#: admin/views/form.php:96
+msgid "Aún no hay %s. Crear uno nuevo."
+msgstr ""
+
+#: admin/views/form.php:109
+msgid "Solo el número. Admite 250000, 250.000 o 1.250,50."
+msgstr ""
+
+#: admin/views/form.php:137
+msgid "Fecha de creación"
+msgstr ""
+
+#: admin/views/form.php:145
+msgid "Guardar cambios"
+msgstr ""
+
+#: admin/views/form.php:145
+msgid "Crear"
+msgstr ""
+
+#: admin/views/form.php:147
+#: admin/views/list.php:121
+msgid "¿Seguro que quieres eliminar este registro? Esta acción no se puede deshacer."
+msgstr ""
+
+#: admin/views/form.php:147
+#: admin/views/list.php:121
+msgid "Eliminar"
+msgstr ""
+
+#: admin/views/form.php:164
+msgid "Seguimientos relacionados"
+msgstr ""
+
+#: admin/views/form.php:168
+msgid "Sin seguimientos todavía."
+msgstr ""
+
+#: admin/views/form.php:176
+#: admin/views/form.php:185
+#: includes/class-crmi-admin.php:549
+#: includes/class-crmi-entities.php:107
+#: includes/class-crmi-entities.php:179
+msgid "Propiedad"
+msgstr ""
+
+#: admin/views/list.php:17
+msgid "Añadir nuevo"
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: admin/views/list.php:34
+msgid "%s: todos"
+msgstr ""
+
+#: admin/views/list.php:42
+msgid "Vencimiento"
+msgstr ""
+
+#: admin/views/list.php:44
+msgid "Fecha: todas"
+msgstr ""
+
+#: admin/views/list.php:45
+msgid "Vencidos"
+msgstr ""
+
+#: admin/views/list.php:46
+msgid "Hoy"
+msgstr ""
+
+#: admin/views/list.php:47
+msgid "Próximos 7 días"
+msgstr ""
+
+#: admin/views/list.php:51
+msgid "Buscar"
+msgstr ""
+
+#: admin/views/list.php:52
+msgid "Buscar…"
+msgstr ""
+
+#: admin/views/list.php:53
+msgid "Filtrar"
+msgstr ""
+
+#: admin/views/list.php:55
+msgid "Limpiar filtros"
+msgstr ""
+
+#. translators: %s: número de registros.
+#: admin/views/list.php:62
+msgid "%s registro"
+msgid_plural "%s registros"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/views/list.php:95
+#: admin/views/list.php:109
+msgid "Acciones"
+msgstr ""
+
+#: admin/views/list.php:101
+msgid "No se han encontrado registros."
+msgstr ""
+
+#: admin/views/list.php:119
+msgid "Editar"
+msgstr ""
+
+#: admin/views/settings.php:15
+#: includes/class-crmi-admin.php:83
+msgid "Ajustes del CRM"
+msgstr ""
+
+#: admin/views/settings.php:20
+msgid "Datos al desinstalar"
+msgstr ""
+
+#: admin/views/settings.php:21
+msgid "Desactivar el plugin nunca borra datos. Por defecto, tampoco se borran al desinstalarlo (eliminarlo desde Plugins), para evitar pérdidas accidentales."
+msgstr ""
+
+#: admin/views/settings.php:28
+msgid "Eliminar todas las tablas y opciones del CRM cuando se desinstale el plugin (irreversible)."
+msgstr ""
+
+#: admin/views/settings.php:30
+msgid "Guardar ajustes"
+msgstr ""
+
+#: admin/views/settings.php:35
+msgid "Datos de ejemplo"
+msgstr ""
+
+#: admin/views/settings.php:36
+msgid "Puedes crear unos pocos contactos, propiedades y seguimientos ficticios para probar el CRM. Solo se crean si lo solicitas aquí y se pueden eliminar después sin afectar a tus datos reales."
+msgstr ""
+
+#: admin/views/settings.php:43
+msgid "Eliminar datos de ejemplo"
+msgstr ""
+
+#: admin/views/settings.php:43
+msgid "¿Eliminar los datos de ejemplo?"
+msgstr ""
+
+#: admin/views/settings.php:52
+msgid "Entiendo que se añadirán datos ficticios a esta instalación."
+msgstr ""
+
+#: admin/views/settings.php:54
+msgid "Crear datos de ejemplo"
+msgstr ""
+
+#: admin/views/settings.php:60
+msgid "Permisos"
+msgstr ""
+
+#. translators: %s: nombre de la capacidad.
+#: admin/views/settings.php:65
+msgid "El acceso al CRM requiere la capacidad %s, que se concede automáticamente a los administradores. Puedes asignarla a otros roles con un gestor de roles."
+msgstr ""
+
+#: includes/class-crmi-admin.php:61
+msgid "Panel"
+msgstr ""
+
+#: includes/class-crmi-admin.php:83
+msgid "Ajustes"
+msgstr ""
+
+#: includes/class-crmi-admin.php:141
+#: includes/class-crmi-admin.php:217
+#: includes/class-crmi-admin.php:237
+msgid "No tienes permisos para realizar esta acción."
+msgstr ""
+
+#: includes/class-crmi-admin.php:149
+msgid "El registro no existe."
+msgstr ""
+
+#: includes/class-crmi-admin.php:171
+msgid "No se pudo guardar el registro en la base de datos."
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-admin.php:203
+msgid "Ya existe otro registro con el mismo valor en «%s»."
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-admin.php:207
+msgid "El registro seleccionado en «%s» no existe."
+msgstr ""
+
+#: includes/class-crmi-admin.php:223
+msgid "Solicitud no válida."
+msgstr ""
+
+#: includes/class-crmi-admin.php:295
+msgid "Registro guardado correctamente."
+msgstr ""
+
+#: includes/class-crmi-admin.php:296
+msgid "Registro eliminado."
+msgstr ""
+
+#: includes/class-crmi-admin.php:297
+msgid "Ajustes guardados."
+msgstr ""
+
+#: includes/class-crmi-admin.php:298
+msgid "Datos de ejemplo creados."
+msgstr ""
+
+#: includes/class-crmi-admin.php:299
+msgid "Los datos de ejemplo ya existen."
+msgstr ""
+
+#: includes/class-crmi-admin.php:300
+msgid "Datos de ejemplo eliminados."
+msgstr ""
+
+#: includes/class-crmi-admin.php:301
+msgid "Marca la casilla de confirmación para crear los datos de ejemplo."
+msgstr ""
+
+#: includes/class-crmi-admin.php:302
+msgid "No se pudo completar la operación."
+msgstr ""
+
+#: includes/class-crmi-admin.php:368
+msgid "El registro no existe o ha sido eliminado."
+msgstr ""
+
+#: includes/class-crmi-admin.php:530
+#: includes/class-crmi-entities.php:75
+#: includes/class-crmi-entities.php:213
+msgid "Teléfono"
+msgstr ""
+
+#: includes/class-crmi-admin.php:531
+msgid "Correo"
+msgstr ""
+
+#: includes/class-crmi-admin.php:532
+msgid "Origen"
+msgstr ""
+
+#: includes/class-crmi-admin.php:537
+#: includes/class-crmi-entities.php:113
+msgid "Título"
+msgstr ""
+
+#: includes/class-crmi-admin.php:538
+#: includes/class-crmi-entities.php:119
+msgid "Referencia"
+msgstr ""
+
+#: includes/class-crmi-admin.php:539
+#: includes/class-crmi-entities.php:125
+msgid "Operación"
+msgstr ""
+
+#: includes/class-crmi-admin.php:540
+msgid "Tipo"
+msgstr ""
+
+#: includes/class-crmi-admin.php:541
+#: includes/class-crmi-entities.php:137
+msgid "Precio"
+msgstr ""
+
+#: includes/class-crmi-admin.php:542
+#: includes/class-crmi-entities.php:141
+msgid "Ubicación"
+msgstr ""
+
+#: includes/class-crmi-admin.php:578
+msgid "(sin título)"
+msgstr ""
+
+#: includes/class-crmi-admin.php:652
+msgid "vencido"
+msgstr ""
+
+#: includes/class-crmi-admin.php:655
+msgid "hoy"
+msgstr ""
+
+#: includes/class-crmi-entities.php:80
+#: includes/class-crmi-entities.php:214
+msgid "Correo electrónico"
+msgstr ""
+
+#: includes/class-crmi-entities.php:85
+msgid "Origen del lead"
+msgstr ""
+
+#: includes/class-crmi-entities.php:97
+#: includes/class-crmi-entities.php:194
+msgid "Notas"
+msgstr ""
+
+#: includes/class-crmi-entities.php:131
+msgid "Tipo de inmueble"
+msgstr ""
+
+#: includes/class-crmi-entities.php:152
+msgid "Descripción"
+msgstr ""
+
+#: includes/class-crmi-entities.php:162
+msgid "Seguimiento"
+msgstr ""
+
+#: includes/class-crmi-entities.php:163
+msgid "Seguimientos"
+msgstr ""
+
+#: includes/class-crmi-entities.php:184
+msgid "Fecha de seguimiento"
+msgstr ""
+
+#: includes/class-crmi-entities.php:212
+msgid "Web"
+msgstr ""
+
+#: includes/class-crmi-entities.php:215
+msgid "Referido"
+msgstr ""
+
+#: includes/class-crmi-entities.php:216
+msgid "Portal inmobiliario"
+msgstr ""
+
+#: includes/class-crmi-entities.php:217
+msgid "Redes sociales"
+msgstr ""
+
+#: includes/class-crmi-entities.php:218
+msgid "Oficina / cartel"
+msgstr ""
+
+#: includes/class-crmi-entities.php:219
+#: includes/class-crmi-entities.php:264
+msgid "Otro"
+msgstr ""
+
+#: includes/class-crmi-entities.php:230
+msgid "Nuevo"
+msgstr ""
+
+#: includes/class-crmi-entities.php:231
+msgid "Contactado"
+msgstr ""
+
+#: includes/class-crmi-entities.php:232
+msgid "Cualificado"
+msgstr ""
+
+#: includes/class-crmi-entities.php:233
+msgid "En negociación"
+msgstr ""
+
+#: includes/class-crmi-entities.php:234
+msgid "Cliente"
+msgstr ""
+
+#: includes/class-crmi-entities.php:235
+msgid "Descartado"
+msgstr ""
+
+#: includes/class-crmi-entities.php:246
+msgid "Venta"
+msgstr ""
+
+#: includes/class-crmi-entities.php:247
+msgid "Alquiler"
+msgstr ""
+
+#: includes/class-crmi-entities.php:258
+msgid "Piso / apartamento"
+msgstr ""
+
+#: includes/class-crmi-entities.php:259
+msgid "Casa / chalet"
+msgstr ""
+
+#: includes/class-crmi-entities.php:260
+msgid "Local comercial"
+msgstr ""
+
+#: includes/class-crmi-entities.php:261
+msgid "Oficina"
+msgstr ""
+
+#: includes/class-crmi-entities.php:262
+msgid "Terreno"
+msgstr ""
+
+#: includes/class-crmi-entities.php:263
+msgid "Garaje / trastero"
+msgstr ""
+
+#: includes/class-crmi-entities.php:275
+msgid "Disponible"
+msgstr ""
+
+#: includes/class-crmi-entities.php:276
+msgid "Reservada"
+msgstr ""
+
+#: includes/class-crmi-entities.php:277
+msgid "Vendida"
+msgstr ""
+
+#: includes/class-crmi-entities.php:278
+msgid "Alquilada"
+msgstr ""
+
+#: includes/class-crmi-entities.php:279
+msgid "Retirada"
+msgstr ""
+
+#: includes/class-crmi-entities.php:290
+msgid "Pendiente"
+msgstr ""
+
+#: includes/class-crmi-entities.php:291
+msgid "Completada"
+msgstr ""
+
+#: includes/class-crmi-entities.php:292
+msgid "Cancelada"
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-entities.php:358
+msgid "El campo «%s» no es una dirección de correo válida."
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-entities.php:376
+msgid "El valor del campo «%s» no es válido."
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-entities.php:390
+msgid "El campo «%s» debe ser un número positivo."
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-entities.php:401
+msgid "El campo «%s» debe ser una fecha válida (AAAA-MM-DD)."
+msgstr ""
+
+#. translators: %s: nombre del campo.
+#: includes/class-crmi-entities.php:416
+msgid "El campo «%s» es obligatorio."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:54
+msgid "Contacto de ejemplo. Busca piso de 2 habitaciones."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:62
+msgid "Contacto de ejemplo. Interesado en local comercial."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:70
+msgid "Contacto de ejemplo."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:76
+msgid "Piso luminoso de ejemplo"
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:81
+msgid "Centro (ejemplo)"
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:83
+#: includes/class-crmi-sample-data.php:93
+msgid "Inmueble ficticio creado como dato de ejemplo."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:86
+msgid "Local comercial de ejemplo"
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:91
+msgid "Zona comercial (ejemplo)"
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:111
+msgid "Llamar para concertar visita"
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:116
+#: includes/class-crmi-sample-data.php:132
+msgid "Seguimiento de ejemplo."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:119
+msgid "Enviar propuesta de alquiler"
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:124
+msgid "Seguimiento de ejemplo (vencido)."
+msgstr ""
+
+#: includes/class-crmi-sample-data.php:127
+msgid "Firma completada"
+msgstr ""
